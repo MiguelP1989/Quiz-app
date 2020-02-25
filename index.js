@@ -80,7 +80,23 @@ choices.forEach(choice => {
     acceptingAnswers = false;
     const selectedChoice = e.target;
     const selectedAnswer = selectedChoice.dataset["number"];
-    getNewQuestion();
+
+    // console.log(selectedAnswer == currentQuestion.answer);
+    if (selectedAnswer == currentQuestion.answer) {
+      classToApply = "correct";
+    } else if (selectedAnswer != currentQuestion.answer) {
+      classToApply = "incorrect";
+    }
+    console.log(classToApply);
+    // const classToApply =
+    //   selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
+
+    selectedChoice.parentElement.classList.add(classToApply);
+
+    setTimeout(() => {
+      selectedChoice.parentElement.classList.remove(classToApply);
+      getNewQuestion();
+    }, 1000);
   });
 });
 
