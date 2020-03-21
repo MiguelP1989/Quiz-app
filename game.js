@@ -82,7 +82,7 @@ getNewQuestion = () => {
 
   const questionIndex = Math.floor(Math.random() * availableQuestions.length);
   currentQuestion = availableQuestions[questionIndex];
-  // console.log("numbeeeeer", currentQuestion);
+
   question.innerText = currentQuestion.question;
 
   choices.forEach(choice => {

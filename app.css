@@ -41,9 +41,13 @@ h3 {
 }
 
 /* utilities */
+body {
+  display: flex;
+  justify-content: center;
+}
 
 .container {
-  width: 100vw;
+  width: 50%;
   height: 100vh;
   display: flex;
   justify-content: center;
